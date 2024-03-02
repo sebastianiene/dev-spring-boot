@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbe2ee33-9c2e-48b8-88a3-dd22d21ef765" name="Changes" comment="added update and delete employee" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="04-spring-boot-rest-crud-20-spring-boot-rest-crud-employee-service-add-employee" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2d9Ir0GlOtAHS2S24LIhNzCdq2h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CruddemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="CruddemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="cruddemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.luv2code.springboot.cruddemo.CruddemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbe2ee33-9c2e-48b8-88a3-dd22d21ef765" name="Changes" comment="" />
+      <created>1709414062130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709414062130</updated>
+      <workItem from="1709414065076" duration="4509000" />
+      <workItem from="1709419268698" duration="1103000" />
+    </task>
+    <task id="LOCAL-00001" summary="made new table employees with employee-directory.sql script and created the Employee Rest controller and the JPA DAO interface and its implementation. in application.properties added the details of the connection to the MySql server.">
+      <option name="closed" value="true" />
+      <created>1709415072753</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709415072753</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added EmployeeService interface and EmployeeServiceImpl class to replace DAO with the service layer">
+      <option name="closed" value="true" />
+      <created>1709415655649</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709415655649</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added findAll(), findById(theid), save(theEmployee), deleteById(theId) methods inside EmployeeDAO.java interface and EmployeeDAOJpaImpl.java class">
+      <option name="closed" value="true" />
+      <created>1709416156543</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709416156543</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added findAll(), findById(theid), save(theEmployee), deleteById(theId) methods inside EmployeeService.java interface and EmployeeServiceImpl.java class">
+      <option name="closed" value="true" />
+      <created>1709416328052</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709416328052</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added getEmployee(@PathVariable int employeeId)">
+      <option name="closed" value="true" />
+      <created>1709417296698</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709417296698</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added  addEmployee(@RequestBody Employee theEmployee)">
+      <option name="closed" value="true" />
+      <created>1709419441088</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709419441088</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added update and delete employee">
+      <option name="closed" value="true" />
+      <created>1709419669554</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709419669555</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="made new table employees with employee-directory.sql script and created the Employee Rest controller and the JPA DAO interface and its implementation. in application.properties added the details of the connection to the MySql server." />
+    <MESSAGE value="added EmployeeService interface and EmployeeServiceImpl class to replace DAO with the service layer" />
+    <MESSAGE value="added findAll(), findById(theid), save(theEmployee), deleteById(theId) methods inside EmployeeDAO.java interface and EmployeeDAOJpaImpl.java class" />
+    <MESSAGE value="added findAll(), findById(theid), save(theEmployee), deleteById(theId) methods inside EmployeeService.java interface and EmployeeServiceImpl.java class" />
+    <MESSAGE value="added getEmployee(@PathVariable int employeeId)" />
+    <MESSAGE value="added  addEmployee(@RequestBody Employee theEmployee)" />
+    <MESSAGE value="added update and delete employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="added update and delete employee" />
+  </component>
+</project>
