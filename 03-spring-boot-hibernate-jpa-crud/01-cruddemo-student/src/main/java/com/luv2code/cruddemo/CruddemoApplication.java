@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.sql.SQLOutput;
 import java.util.List;
 
 @SpringBootApplication
@@ -21,14 +22,13 @@ public class CruddemoApplication {
 
 		return runner -> {
 		//	createStudent(studentDAO);
-		//	createMultipleStudents(studentDAO);
+			createMultipleStudents(studentDAO);
 			//readStudent(studentDAO);
 		//	queryForStudents(studentDAO);
 		//	queryForStudentsByLastName(studentDAO);
 			//updateStudent(studentDAO);
 		//	deleteStudent(studentDAO);
-
-			deleteAllStudents(studentDAO);
+			//deleteAllStudents(studentDAO);
 
 		};
 	}
