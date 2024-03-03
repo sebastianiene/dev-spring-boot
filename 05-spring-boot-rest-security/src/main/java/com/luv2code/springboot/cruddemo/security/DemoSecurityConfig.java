@@ -14,8 +14,6 @@ import javax.sql.DataSource;
 @Configuration
 public class DemoSecurityConfig {
 
-    // add support for JDBC ... no more hardcoded users :-)
-
     @Bean
     public UserDetailsManager userDetailsManager(DataSource dataSource) {
 
@@ -44,31 +42,4 @@ public class DemoSecurityConfig {
 
         return http.build();
     }
-
-
-/*
-    @Bean
-    public InMemoryUserDetailsManager userDetailsManager() {
-
-        UserDetails john = User.builder()
-                .username("john")
-                .password("{noop}test123")
-                .roles("EMPLOYEE")
-                .build();
-
-        UserDetails mary = User.builder()
-                .username("mary")
-                .password("{noop}test123")
-                .roles("EMPLOYEE", "MANAGER")
-                .build();
-
-        UserDetails susan = User.builder()
-                .username("susan")
-                .password("{noop}test123")
-                .roles("EMPLOYEE", "MANAGER", "ADMIN")
-                .build();
-
-        return new InMemoryUserDetailsManager(john, mary, susan);
-    }
-*/
 }
