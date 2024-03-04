@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <head>
     <meta charset="UTF-8">
     <title>luv2code Company Home Page</title>
@@ -45,8 +46,9 @@
 <form action="#" th:action="@{/logout}"
       method="POST">
 
-        <input type="submit" value="Logout" />
-    </form>
+    <input type="submit" value="Logout" class="btn btn-outline-primary mt-2" />
+
+</form>
 
 </body>
 </html>
