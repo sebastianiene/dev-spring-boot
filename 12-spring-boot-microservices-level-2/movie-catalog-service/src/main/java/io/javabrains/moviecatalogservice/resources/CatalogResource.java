@@ -1,5 +1,6 @@
 package io.javabrains.moviecatalogservice.resources;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.javabrains.moviecatalogservice.models.CatalogItem;
 import io.javabrains.moviecatalogservice.models.Movie;
 import io.javabrains.moviecatalogservice.models.Rating;
@@ -25,8 +26,8 @@ public class CatalogResource {
 
     @Autowired
     WebClient.Builder webClientBuilder;
-
     @RequestMapping("/{userId}")
+    @CircuitBreaker(name = "movie-catalog-service", fallbackMethod = "getFallbackCatalog")
     public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
 
         UserRating userRating = restTemplate.getForObject("http://ratings-data-service/ratingsdata/user/" + userId, UserRating.class);
@@ -37,7 +38,11 @@ public class CatalogResource {
                     return new CatalogItem(movie.getName(), movie.getDescription(), rating.getRating());
                 })
                 .collect(Collectors.toList());
+    }
 
+    public List<CatalogItem> getFallbackCatalog(@PathVariable("userId") String userId) //(Exception catalogException)  //(@PathVariable("userId") String userId)
+     {
+            return Arrays.asList(new CatalogItem("No movie", "",0));
     }
 }
 

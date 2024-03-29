@@ -5,6 +5,7 @@ public class CatalogItem {
     private String desc;
     private int rating;
 
+    public CatalogItem(){}
     public String getName() {
         return name;
     }
