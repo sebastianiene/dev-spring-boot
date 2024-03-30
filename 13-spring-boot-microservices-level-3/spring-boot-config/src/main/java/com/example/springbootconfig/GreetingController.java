@@ -23,7 +23,7 @@ public class GreetingController {
     private DbSettings dbSettings;  //to use autowired annotation
 
 //    @Value("#{${dbValues}}")
-//    private Map<String,String> dbValues;  //getting them from application.properties the old way
+//    private Map<String,String> dbValues;  //getting them from application.yml the old way
 
 
     @GetMapping("/greeting")
