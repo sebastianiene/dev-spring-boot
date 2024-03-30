@@ -2,6 +2,7 @@ package com.example.springbootconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +23,9 @@ public class GreetingController {
     @Autowired
     private DbSettings dbSettings;  //to use autowired annotation
 
+    @Autowired
+    private Environment env;
+
 //    @Value("#{${dbValues}}")
 //    private Map<String,String> dbValues;  //getting them from application.yml the old way
 
@@ -29,6 +33,11 @@ public class GreetingController {
     @GetMapping("/greeting")
     public String greeting(){
 //        return greetingMessage+staticMessage+listValues+dbValues;
-        return dbSettings.getConnection()+ dbSettings.getHost();
+        return listValues+ dbSettings.getConnection();
+    }
+
+    @GetMapping("/envdetails")
+    public String envDetails(){
+        return env.toString();
     }
 }
