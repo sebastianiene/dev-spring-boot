@@ -4,6 +4,7 @@ import { Luv2ShopFormService } from 'src/app/services/luv2-shop-form.service';
 import { Country } from 'src/app/common/country';
 import { State } from 'src/app/common/state';
 import { Luv2ShopValidators } from 'src/app/validators/luv2-shop-validators';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-checkout',
@@ -27,10 +28,13 @@ export class CheckoutComponent implements OnInit {
   
   
   constructor(private formBuilder: FormBuilder,
-              private luv2ShopFormService: Luv2ShopFormService) { }
+              private luv2ShopFormService: Luv2ShopFormService,
+              private cartService: CartService) { }
 
   ngOnInit(): void {
     
+    this.reviewCartDetails();
+
     this.checkoutFormGroup = this.formBuilder.group({
       customer: this.formBuilder.group({
         firstName: new FormControl('', 
@@ -108,6 +112,20 @@ export class CheckoutComponent implements OnInit {
     );
   }
 
+  reviewCartDetails() {
+
+    // subscribe to cartService.totalQuantity
+    this.cartService.totalQuantity.subscribe(
+      totalQuantity => this.totalQuantity = totalQuantity
+    );
+
+    // subscribe to cartService.totalPrice
+    this.cartService.totalPrice.subscribe(
+      totalPrice => this.totalPrice = totalPrice
+    );
+
+  }
+
   get firstName() { return this.checkoutFormGroup.get('customer.firstName'); }
   get lastName() { return this.checkoutFormGroup.get('customer.lastName'); }
   get email() { return this.checkoutFormGroup.get('customer.email'); }
@@ -152,6 +170,11 @@ export class CheckoutComponent implements OnInit {
 
   onSubmit() {
     console.log("Handling the submit button");
+
+    if (this.checkoutFormGroup.invalid) {
+      this.checkoutFormGroup.markAllAsTouched();
+    }
+
     console.log(this.checkoutFormGroup.get('customer').value);
     console.log("The email address is " + this.checkoutFormGroup.get('customer').value.email);
   
